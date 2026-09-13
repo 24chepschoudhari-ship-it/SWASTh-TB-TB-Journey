@@ -10,7 +10,7 @@ Each decision has four options. Options can lead to different next scenes, with 
 The game does not diagnose the player. Symptoms are not treated as proof of TB. Diagnostic testing and clinical evaluation are presented as part of the healthcare pathway. SWASTh-TB is presented as a proposed research concept, not a clinically validated diagnostic.
 
 ### Languages
-English • Hindi • Marathi • Gujarati
+English 
 
 ### Run locally
 Open `index.html` in a browser.
