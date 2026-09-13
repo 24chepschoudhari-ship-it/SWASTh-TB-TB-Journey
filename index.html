@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="The TB Journey — an educational simulation by SWASTh-TB.">
+<meta name="theme-color" content="#06121d">
+<link rel="manifest" href="manifest.webmanifest">
+<title>The TB Journey | SWASTh-TB</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+<header>
+  <div class="brand"><span class="mark">S</span> SWASTh-TB</div>
+  <div class="header-actions">
+    <label class="lang-label" for="language">LANGUAGE</label>
+    <select id="language" aria-label="Language">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+      <option value="mr">मराठी</option>
+      <option value="gu">ગુજરાતી</option>
+    </select>
+    <button class="home-btn" id="homeBtn">HOME</button>
+  </div>
+</header>
+
+<main>
+<section id="home" class="screen active">
+<div class="hero">
+<p class="eyebrow" data-i18n="eyebrow"></p>
+<h1 data-i18n="title"></h1>
+<p class="tagline" data-i18n="tagline"></p>
+<p class="hero-copy" data-i18n="homeText"></p>
+<div class="actions">
+<button class="primary" id="startBtn"></button>
+<button class="ghost" id="aboutBtn"></button>
+</div>
+</div>
+</section>
+
+<section id="about" class="screen">
+<div class="page">
+<button class="back" id="aboutBack"></button>
+<p class="eyebrow" data-i18n="aboutEyebrow"></p>
+<h2 data-i18n="aboutTitle"></h2>
+<div class="cards">
+<article><b data-i18n="a1h"></b><p data-i18n="a1p"></p></article>
+<article><b data-i18n="a2h"></b><p data-i18n="a2p"></p></article>
+<article><b data-i18n="a3h"></b><p data-i18n="a3p"></p></article>
+</div>
+<div class="note" data-i18n="disclaimer"></div>
+</div>
+</section>
+
+<section id="roles" class="screen">
+<div class="page wide">
+<button class="back" id="rolesBack"></button>
+<p class="eyebrow" data-i18n="rolesEyebrow"></p>
+<h2 data-i18n="rolesTitle"></h2>
+<p class="muted" data-i18n="rolesSub"></p>
+<div class="role-grid">
+<button class="role" data-role="patient"><span>01</span><strong data-i18n="patient"></strong><p data-i18n="patientDesc"></p><em data-i18n="enter"></em></button>
+<button class="role" data-role="worker"><span>02</span><strong data-i18n="worker"></strong><p data-i18n="workerDesc"></p><em data-i18n="enter"></em></button>
+<button class="role" data-role="community"><span>03</span><strong data-i18n="community"></strong><p data-i18n="communityDesc"></p><em data-i18n="enter"></em></button>
+</div>
+<div class="status"><span id="count">0</span> / 3 <span data-i18n="completed"></span></div>
+<button class="biology-btn" id="biologyBtn"></button>
+</div>
+</section>
+
+<section id="journey" class="screen">
+<div class="page journey-page">
+<div class="journey-head">
+<button class="back" id="journeyBack"></button>
+<span id="roleLabel"></span><span id="sceneLabel"></span>
+</div>
+<div class="progress"><div id="progress"></div></div>
+<div class="journey-grid">
+<aside>
+<div class="role-symbol" id="roleSymbol"></div>
+<b id="sideRole"></b><p id="sideDescription"></p>
+<p class="hint" data-i18n="choiceHint"></p>
+</aside>
+<div>
+<p class="eyebrow" id="tag"></p>
+<h2 id="sceneTitle"></h2>
+<div id="sceneText" class="story"></div>
+<div id="choices" class="choices"></div>
+<div id="feedback" class="feedback hidden">
+<b data-i18n="why"></b><p id="feedbackText"></p>
+<button class="continue" id="continue"></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="biology" class="screen">
+<div class="page wide">
+<button class="back" id="bioBack"></button>
+<p class="eyebrow" data-i18n="bioEyebrow"></p>
+<h2 data-i18n="bioTitle"></h2>
+<p class="muted" data-i18n="bioSub"></p>
+<div class="bio-chain" id="bioChain"></div>
+<div class="bio-card" id="bioCard">
+<p class="eyebrow" id="bioType"></p>
+<h3 id="bioName"></h3>
+<p id="bioText"></p>
+<button class="primary" id="bioNext"></button>
+</div>
+<div class="bio-end hidden" id="bioEnd">
+<div class="blue"></div>
+<p class="eyebrow" data-i18n="readout"></p>
+<h3>BLUE</h3>
+<p data-i18n="blueText"></p>
+<p class="formula">PstS-1 → C8Nb → TAZ / signalling → LacZ → X-gal → <b>BLUE</b></p>
+<div class="note" data-i18n="validationNote"></div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer data-i18n="footer"></footer>
+</div>
+<script src="languages/content.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
